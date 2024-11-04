@@ -1,0 +1,47 @@
+{
+  "format_version": "1.21.20",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "sakatale:mahiyal",
+      "is_spawnable": true,
+      "is_summonable": true,
+      "enable_mob_ai": true,
+      "min_health": 16,
+      "max_health": 16,
+      "armor": 0,
+      "damage": 2
+    },
+    "components": {
+      "minecraft:health": {
+        "value": 16
+      },
+      "minecraft:armor": {
+        "value": 0
+      },
+      "minecraft:attack": {
+        "damage": 2
+      },
+      "minecraft:movement": {
+        "value": 0.2
+      },
+      "minecraft:behavior": {
+        "minecraft:melee_attack": {
+          "damage": 2,
+          "reach": 1.5
+        }
+      },
+      "minecraft:water": {
+        "is_swimmer": true
+      }
+    },
+    "events": {
+      "on_attack": {
+        "add": {
+          "component": "minecraft:effect:slowness",
+          "value": 5,
+          "duration": 3
+        }
+      }
+    }
+  }
+}
